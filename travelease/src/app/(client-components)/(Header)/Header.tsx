@@ -41,13 +41,11 @@ const Header: FC<HeaderProps> = ({ className = "" }) => {
     setShowHeroSearch(null);
   }, [pathname]);
 
-  // HIDDEN WHEN SCROLL EVENT
   useEffect(() => {
     window.addEventListener("scroll", handleEvent);
     return () => {
       window.removeEventListener("scroll", handleEvent);
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleEvent = () => {
@@ -58,7 +56,7 @@ const Header: FC<HeaderProps> = ({ className = "" }) => {
     if (!document.querySelector("#nc-header-anchor")) {
       return;
     }
-    
+
     let currentScrollPos = window.pageYOffset;
     if (
       WIN_PREV_POSITION - currentScrollPos > 100 ||
@@ -74,11 +72,10 @@ const Header: FC<HeaderProps> = ({ className = "" }) => {
   const renderHeroSearch = () => {
     return (
       <div
-        className={`absolute inset-x-0 top-0 transition-all will-change-[transform,opacity] ${
-          showHeroSearch
-            ? "visible"
-            : "-translate-x-0 -translate-y-[90px] scale-x-[0.395] scale-y-[0.6] opacity-0 invisible pointer-events-none"
-        }`}
+        className={`absolute inset-x-0 top-0 transition-all will-change-[transform,opacity] ${showHeroSearch
+          ? "visible"
+          : "-translate-x-0 -translate-y-[90px] scale-x-[0.395] scale-y-[0.6] opacity-0 invisible pointer-events-none"
+          }`}
       >
         <div className={`w-full max-w-4xl mx-auto pb-6`}>
           <HeroSearchFormSmall
@@ -94,11 +91,10 @@ const Header: FC<HeaderProps> = ({ className = "" }) => {
   const renderButtonOpenHeroSearch = () => {
     return (
       <div
-        className={`w-full relative flex items-center justify-between border border-neutral-200 dark:border-neutral-6000 rounded-full shadow hover:shadow-md transition-all ${
-          showHeroSearch
-            ? "-translate-x-0 translate-y-20 scale-x-[2.55] scale-y-[1.8] opacity-0 pointer-events-none invisible"
-            : "visible"
-        }`}
+        className={`w-full relative flex items-center justify-between border border-neutral-200 dark:border-neutral-6000 rounded-full shadow hover:shadow-md transition-all ${showHeroSearch
+          ? "-translate-x-0 translate-y-20 scale-x-[2.55] scale-y-[1.8] opacity-0 pointer-events-none invisible"
+          : "visible"
+          }`}
       >
         <div className="flex items-center font-medium text-sm">
           <span
@@ -140,26 +136,23 @@ const Header: FC<HeaderProps> = ({ className = "" }) => {
   return (
     <>
       <div
-        className={`nc-Header fixed z-40 top-0 inset-0 bg-black/30 dark:bg-black/50 transition-opacity will-change-[opacity] ${
-          showHeroSearch ? "visible" : "invisible opacity-0 pointer-events-none"
-        }`}
+        className={`nc-Header fixed z-40 top-0 inset-0 bg-black/30 dark:bg-black/50 transition-opacity will-change-[opacity] ${showHeroSearch ? "visible" : "invisible opacity-0 pointer-events-none"
+          }`}
       ></div>
       {showHeroSearch && <div id="nc-header-anchor"></div>}
       <header ref={headerInnerRef} className={`sticky top-0 z-40 ${className}`}>
         <div
           className={`bg-white dark:bg-neutral-900 absolute h-full inset-x-0 top-0 transition-transform will-change-[transform,opacity]
           ${showHeroSearch ? "duration-75" : ""} 
-          ${
-            showHeroSearch
+          ${showHeroSearch
               ? currentTab === "Cars" || currentTab === "Flights"
                 ? "scale-y-[4.4]"
                 : "scale-y-[3.4]"
               : ""
-          }`}
+            }`}
         ></div>
         <div className="relative px-4 lg:container h-[88px] flex">
           <div className="flex-1 flex justify-between">
-            {/* Logo (lg+) */}
             <div className="relative z-10 hidden md:flex flex-1 items-center">
               <Logo />
             </div>
@@ -174,7 +167,6 @@ const Header: FC<HeaderProps> = ({ className = "" }) => {
               {renderHeroSearch()}
             </div>
 
-            {/* NAV */}
             <div className="hidden md:flex relative z-10 flex-1 justify-end text-neutral-700 dark:text-neutral-100">
               <div className=" flex space-x-1">
                 <LangDropdown />

@@ -37,8 +37,6 @@ const SiteHeader = () => {
   };
 
   useEffect(() => {
-    // disconnect the observer
-    // observer for show the LINE bellow header
     if (!PAGES_HIDE_HEADER_BORDER.includes(pathname as PathName)) {
       OBSERVER && OBSERVER.disconnect();
       OBSERVER = null;

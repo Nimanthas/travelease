@@ -1,0 +1,69 @@
+I require a detailed design specification for a high-end travel website tailored for a Sri Lankan tour company, emphasizing a 'Moody Luxury Jungle' aesthetic based on the attached image and files. Please structure the specification with the following sections:
+
+1. **Visual Style:**
+   - Color Palette: Specify the primary background color, accent colors for CTA buttons, and any additional colors for depth.
+   - Imagery: Outline the types of imagery to be used, including specific locations in Sri Lanka and any design elements for overlays.
+   - Typography: Recommend specific font choices for headlines and body text, focusing on elegance and readability.
+
+2. **Layout & Structure:**
+   - Hero Section: Describe the main visual component (e.g., video or image), overlay text, and any interactive elements.
+   - Journey Path: Explain the layout for guiding users through the site, including specific sections to highlight.
+   - Sections to Include: List main sections such as popular tours, video gallery, guides, and testimonials, with a brief description of each.
+
+3. **Interactions:**
+   - Parallax Scrolling: Detail how background elements will interact with foreground content during scrolling.
+   - Hover States: Specify the visual effect for buttons or interactive elements on hover.
+   - Transitions: Describe the animations or transitions that will occur as users interact with the site.
+
+Ensure the design conveys exclusivity, adventure, and a premium experience. The output should be presented in a clear and organized format, suitable for a design team to follow. Avoid vague suggestions and focus on specific, actionable details. The design should be pixel perfectly aligned with the design image given including animations. Also make sure design supports two main themes as light and dark with aligned to the given logo colors. It is must that you adhere to the logo colors strictly. 
+
+Below is a explanation of design sections where you are advised to follow the flow aligned with attached file content as well:
+
+1. **Core Application**
+   - Core application should adopt from https://github.com/Nimanthas/travelease.git repository and it is MUST to reuse and adopt the application on top of this website.
+   - All the functionalities in https://github.com/Nimanthas/travelease.git should preserve without intact and only allowed to align the design perfectly with given instructions.
+   - Make sure when coding maintain the structure of the code aligned perfectly with current structure and you will place the files in appropriate places.
+   - Application should support responsive.
+
+2. **Header Section**
+   - Header should align to the header in https://github.com/Nimanthas/travelease.git as same design, layout and components.
+
+3. **Hero Section**
+   - The design should follow the same exact design as per the design image given with having leaves and background video.
+   - The leaves should animated based on the scrolling effect and leaves design should faint, elegant botanical line art (monstera leaves) used as a background texture to add depth without distracting from the content.
+   - The leaves should have a small motion where like having a motion in wind. 
+   - The background video should be in full screen mode without effecting accept ratio of the video.
+   - Additionally to the design search bar should be there to search
+   - The background video should be https://www.youtube.com/watch?v=tzeXMaXWsuc
+   - As per the design the background video should be running inside the frame.
+
+
+4. **Section 01 - Story of Journey section**
+   - This section will be below to the Hero section
+   - This section will show a destination map with dotted line connecting the sub sections of the destinations.
+   - The dotted line should continue through out he website until footer connecting each sections.
+   - It must be responsive, curving naturally between text blocks.
+   - Each subsection will have a title and a description and each sub section can identify by a map pin location marker.
+   - Each map pin location marker will give you a description of something inspiring about discovering Sri Lanka to inspire the website visitor.
+   - This elements should be animated to give full journey vibe to the user and give feel of following through a journey.
+
+4. **Section 02 - Mood board - Content Sections**
+   - This section will be a image collage where contains images of our tour destinations.
+   - This should filled with images without borders fit to each tile perfectly without effecting accept ratio.
+   - Also the dotted line should continue through out this as well perfectly.
+
+5. **Section 03 - Popular Tours**
+   - This section user will able to see the popular and trending packages that is there in the website.
+   - each should align the to design of showing a popular or trending service based on https://github.com/Nimanthas/travelease.git and also reusing the same components. This is equal to 'Featured places to stay' section in https://github.com/Nimanthas/travelease.git.
+   - Popular tours will get sections based on the regions of Sri Lanka as South, Central, North, and West.
+
+6. **Section 04 - Services**
+   - Here we will categorize our main services that provides.
+   - It will be tile slider where users can slides through the services.
+   - This is equal to the component in 'Suggestions for discovery' layout in https://github.com/Nimanthas/travelease.git.
+
+4. **All other section**
+   - The remaining all the sections in https://github.com/Nimanthas/travelease.git will come into here.
+
+
+For context, I have experience in visual design but am not a web development expert. The specification should serve as a comprehensive guide for creating a visually stunning and user-friendly experience for high-end travelers.
