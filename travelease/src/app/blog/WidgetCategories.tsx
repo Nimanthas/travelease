@@ -1,8 +1,8 @@
-import CardCategory1 from "@/components/CardCategory1";
+import CardCategory1 from "@/components/CardCategoryDefault";
 import { DEMO_CATEGORIES } from "@/data/taxonomies";
 import { TaxonomyType } from "@/data/types";
 import React, { FC } from "react";
-import WidgetHeading1 from "./WidgetHeading1";
+import WidgetHeading1 from "./WidgetHeadingDefault";
 
 export interface WidgetCategoriesProps {
   className?: string;

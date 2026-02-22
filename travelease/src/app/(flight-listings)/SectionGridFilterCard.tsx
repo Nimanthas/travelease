@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import TabFilters from "./TabFilters";
-import Heading2 from "@/shared/Heading2";
+import Heading2 from "@/shared/HeadingAlternate";
 import FlightCard, { FlightCardProps } from "@/components/FlightCard";
 import ButtonPrimary from "@/shared/ButtonPrimary";
 

@@ -4,7 +4,7 @@ import SectionHeroArchivePage from "../(server-components)/SectionHeroArchivePag
 import heroRightImage from "@/images/hero-right-car.png";
 import BackgroundSection from "@/components/BackgroundSection";
 import SectionSliderNewCategories from "@/components/SectionSliderNewCategories";
-import SectionSubscribe2 from "@/components/SectionSubscribe2";
+import SectionSubscribe2 from "@/components/SectionSubscribeNewsletter";
 import SectionGridAuthorBox from "@/components/SectionGridAuthorBox";
 
 const Layout = ({ children }: { children: ReactNode }) => {

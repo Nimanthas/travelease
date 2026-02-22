@@ -1,5 +1,5 @@
 import CardAuthorBox from "@/components/CardAuthorBox";
-import CardAuthorBox2 from "@/components/CardAuthorBox2";
+import CardAuthorBox2 from "@/components/CardAuthorBoxAlternate";
 import Heading from "@/shared/Heading";
 import { DEMO_AUTHORS } from "@/data/authors";
 import { AuthorType } from "@/data/types";

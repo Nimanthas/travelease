@@ -7,7 +7,7 @@ import ButtonClose from "@/shared/ButtonClose";
 import Checkbox from "@/shared/Checkbox";
 import Pagination from "@/shared/Pagination";
 import TabFilters from "./TabFilters";
-import Heading2 from "@/shared/Heading2";
+import Heading2 from "@/shared/HeadingAlternate";
 import CarCardH from "@/components/CarCardH";
 import AnyReactComponent from "@/components/AnyReactComponent/AnyReactComponent";
 

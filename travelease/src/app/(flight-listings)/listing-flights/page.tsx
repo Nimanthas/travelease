@@ -1,7 +1,7 @@
 import SectionHeroArchivePage from "@/app/(server-components)/SectionHeroArchivePage";
 import BgGlassmorphism from "@/components/BgGlassmorphism";
 import SectionSliderNewCategories from "@/components/SectionSliderNewCategories";
-import SectionSubscribe2 from "@/components/SectionSubscribe2";
+import SectionSubscribe2 from "@/components/SectionSubscribeNewsletter";
 import React, { FC } from "react";
 import SectionGridFilterCard from "../SectionGridFilterCard";
 

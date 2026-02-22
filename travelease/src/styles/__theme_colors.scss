@@ -1,42 +1,105 @@
 // Change your color you want --- please input rgb color (ex: 22,33,44)
 
-// THEME PALETTE 10 indigo-coolGrey ==========================================
+// THEME PALETTE - Sri Lankan Luxury Jungle (Logo Colors) ==========================================
 :root {
-  // PRIMARY COLOR
-  --c-primary-50: 238, 242, 255;
-  --c-primary-100: 224, 231, 255;
-  --c-primary-200: 199, 210, 254;
-  --c-primary-300: 165, 180, 252;
-  --c-primary-400: 129, 140, 248;
-  --c-primary-500: 99, 102, 241;
-  --c-primary-600: 79, 70, 229;
-  --c-primary-700: 67, 56, 202;
-  --c-primary-800: 55, 48, 163;
-  --c-primary-900: 49, 46, 129;
+  // PRIMARY COLOR - Deep Jungle Green
+  --c-primary-50: 240, 247, 243;
+  --c-primary-100: 217, 235, 224;
+  --c-primary-200: 179, 215, 193;
+  --c-primary-300: 140, 195, 162;
+  --c-primary-400: 102, 175, 131;
+  --c-primary-500: 26, 77, 46;
+  --c-primary-600: 21, 61, 37;
+  --c-primary-700: 16, 46, 28;
+  --c-primary-800: 11, 30, 19;
+  --c-primary-900: 5, 15, 9;
 
-  // SECONDARY COLOR
-  --c-secondary-50: 240, 253, 250;
-  --c-secondary-100: 204, 251, 241;
-  --c-secondary-200: 153, 246, 228;
-  --c-secondary-300: 153, 246, 228;
-  --c-secondary-400: 45, 212, 191;
-  --c-secondary-500: 20, 184, 166;
-  --c-secondary-600: 13, 148, 136;
-  --c-secondary-700: 15, 118, 110;
-  --c-secondary-800: 17, 94, 89;
-  --c-secondary-900: 19, 78, 74;
+  // SECONDARY COLOR - Forest Green
+  --c-secondary-50: 244, 247, 242;
+  --c-secondary-100: 227, 235, 224;
+  --c-secondary-200: 199, 215, 193;
+  --c-secondary-300: 171, 195, 162;
+  --c-secondary-400: 143, 175, 131;
+  --c-secondary-500: 79, 121, 66;
+  --c-secondary-600: 63, 97, 53;
+  --c-secondary-700: 47, 73, 40;
+  --c-secondary-800: 32, 48, 26;
+  --c-secondary-900: 16, 24, 13;
 
-  // NEUTRAL COLOR
-  --c-neutral-50: 249, 250, 251;
-  --c-neutral-100: 243, 244, 246;
-  --c-neutral-200: 229, 231, 235;
-  --c-neutral-300: 209, 213, 219;
+  // NEUTRAL COLOR - Warm Grays
+  --c-neutral-50: 250, 248, 245;
+  --c-neutral-100: 245, 243, 240;
+  --c-neutral-200: 229, 227, 224;
+  --c-neutral-300: 209, 207, 204;
   --c-neutral-400: 156, 163, 175;
   --c-neutral-500: 107, 114, 128;
   --c-neutral-600: 75, 85, 99;
   --c-neutral-700: 55, 65, 81;
   --c-neutral-800: 31, 41, 55;
   --c-neutral-900: 17, 24, 39;
+
+  // ACCENT COLOR - Warm Gold/Amber (adjusted for WCAG AA)
+  --c-accent-50: 250, 246, 240;
+  --c-accent-100: 243, 233, 217;
+  --c-accent-200: 231, 211, 179;
+  --c-accent-300: 219, 189, 141;
+  --c-accent-400: 207, 167, 103;
+  --c-accent-500: 150, 110, 70;
+  --c-accent-600: 127, 99, 70;
+  --c-accent-700: 105, 82, 58;
+  --c-accent-800: 85, 66, 47;
+  --c-accent-900: 42, 33, 23;
+}
+
+// Dark Mode - Sri Lankan Luxury Jungle ==========================================
+.dark {
+  // PRIMARY COLOR - Lighter Jungle Green for dark mode (adjusted for WCAG AA)
+  --c-primary-50: 5, 15, 9;
+  --c-primary-100: 11, 30, 19;
+  --c-primary-200: 16, 46, 28;
+  --c-primary-300: 21, 61, 37;
+  --c-primary-400: 26, 77, 46;
+  --c-primary-500: 102, 149, 114;
+  --c-primary-600: 121, 167, 131;
+  --c-primary-700: 140, 185, 148;
+  --c-primary-800: 159, 203, 165;
+  --c-primary-900: 178, 221, 182;
+
+  // SECONDARY COLOR - Lighter Forest Green
+  --c-secondary-50: 16, 24, 13;
+  --c-secondary-100: 32, 48, 26;
+  --c-secondary-200: 47, 73, 40;
+  --c-secondary-300: 63, 97, 53;
+  --c-secondary-400: 79, 121, 66;
+  --c-secondary-500: 107, 148, 86;
+  --c-secondary-600: 135, 175, 106;
+  --c-secondary-700: 163, 202, 126;
+  --c-secondary-800: 191, 229, 146;
+  --c-secondary-900: 219, 255, 166;
+
+  // NEUTRAL COLOR - Dark backgrounds
+  --c-neutral-50: 17, 24, 39;
+  --c-neutral-100: 31, 41, 55;
+  --c-neutral-200: 55, 65, 81;
+  --c-neutral-300: 75, 85, 99;
+  --c-neutral-400: 107, 114, 128;
+  --c-neutral-500: 156, 163, 175;
+  --c-neutral-600: 209, 213, 219;
+  --c-neutral-700: 229, 231, 235;
+  --c-neutral-800: 243, 244, 246;
+  --c-neutral-900: 249, 250, 251;
+
+  // ACCENT COLOR - Lighter Gold/Amber
+  --c-accent-50: 42, 33, 23;
+  --c-accent-100: 85, 66, 47;
+  --c-accent-200: 127, 99, 70;
+  --c-accent-300: 170, 132, 93;
+  --c-accent-400: 212, 165, 116;
+  --c-accent-500: 232, 196, 160;
+  --c-accent-600: 238, 211, 184;
+  --c-accent-700: 244, 226, 208;
+  --c-accent-800: 250, 241, 232;
+  --c-accent-900: 255, 255, 255;
 }
 
 // THEME PALETTE 1 ==========================================

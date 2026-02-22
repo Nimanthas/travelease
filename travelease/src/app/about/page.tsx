@@ -6,7 +6,7 @@ import SectionHero from "./SectionHero";
 import BgGlassmorphism from "@/components/BgGlassmorphism";
 import BackgroundSection from "@/components/BackgroundSection";
 import SectionClientSay from "@/components/SectionClientSay";
-import SectionSubscribe2 from "@/components/SectionSubscribe2";
+import SectionSubscribe2 from "@/components/SectionSubscribeNewsletter";
 
 export interface PageAboutProps {}
 

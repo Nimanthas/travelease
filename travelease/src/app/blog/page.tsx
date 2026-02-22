@@ -4,7 +4,7 @@ import SectionAds from "./SectionAds";
 import SectionMagazine5 from "./SectionMagazine5";
 import SectionLatestPosts from "./SectionLatestPosts";
 import BgGlassmorphism from "@/components/BgGlassmorphism";
-import SectionSubscribe2 from "@/components/SectionSubscribe2";
+import SectionSubscribe2 from "@/components/SectionSubscribeNewsletter";
 
 // DEMO DATA
 const POSTS = DEMO_POSTS;

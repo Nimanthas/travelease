@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { PostDataType } from "@/data/types";
-import Card12 from "./Card12";
-import Card13 from "./Card13";
+import Card12 from "./CardBlogMagazine";
+import Card13 from "./CardBlogMagazineAlt";
 
 export interface SectionMagazine5Props {
   posts: PostDataType[];

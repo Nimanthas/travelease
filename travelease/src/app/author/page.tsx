@@ -5,7 +5,7 @@ import CarCard from "@/components/CarCard";
 import CommentListing from "@/components/CommentListing";
 import ExperiencesCard from "@/components/ExperiencesCard";
 import StartRating from "@/components/StartRating";
-import StayCard from "@/components/StayCard2";
+import StayCard from "@/components/StayCardAlternate";
 import {
   DEMO_CAR_LISTINGS,
   DEMO_EXPERIENCES_LISTINGS,

@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { TaxonomyType } from "@/data/types";
-import WidgetHeading1 from "./WidgetHeading1";
+import WidgetHeading1 from "./WidgetHeadingDefault";
 import Tag from "@/shared/Tag";
 import { DEMO_TAGS } from "@/data/taxonomies";
 

@@ -1,7 +1,7 @@
 "use client";
 
 import Logo from "@/shared/Logo";
-import SocialsList1 from "@/shared/SocialsList1";
+import SocialsList1 from "@/shared/SocialsListDefault";
 import { CustomLink } from "@/data/types";
 import React from "react";
 import FooterNav from "./FooterNav";

@@ -3,7 +3,7 @@ import { DEMO_CAR_LISTINGS } from "@/data/listings";
 import { CarDataType } from "@/data/types";
 import Pagination from "@/shared/Pagination";
 import TabFilters from "./TabFilters";
-import Heading2 from "@/shared/Heading2";
+import Heading2 from "@/shared/HeadingAlternate";
 import CarCard from "@/components/CarCard";
 
 export interface SectionGridFilterCardProps {

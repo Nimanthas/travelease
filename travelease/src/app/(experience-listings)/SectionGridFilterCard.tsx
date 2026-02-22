@@ -3,7 +3,7 @@ import { DEMO_EXPERIENCES_LISTINGS } from "@/data/listings";
 import { ExperiencesDataType, StayDataType } from "@/data/types";
 import Pagination from "@/shared/Pagination";
 import TabFilters from "./TabFilters";
-import Heading2 from "@/shared/Heading2";
+import Heading2 from "@/shared/HeadingAlternate";
 import ExperiencesCard from "@/components/ExperiencesCard";
 
 export interface SectionGridFilterCardProps {

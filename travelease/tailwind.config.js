@@ -2,7 +2,6 @@
 
 const defaultTheme = require("tailwindcss/defaultTheme");
 
-// Custom color with css variable color in __theme_color.scss
 function customColors(cssVar) {
   return ({ opacityVariable, opacityValue }) => {
     if (opacityValue !== undefined) {
@@ -26,10 +25,6 @@ module.exports = {
         "2xl": "128px",
       },
     },
-    // fontFamily: {
-    //   display: ["var(--font-display)", ...defaultTheme.fontFamily.sans],
-    //   body: ["var(--font-body)", ...defaultTheme.fontFamily.sans],
-    // },
 
     extend: {
       colors: {
@@ -40,7 +35,7 @@ module.exports = {
           300: customColors("--c-primary-300"),
           400: customColors("--c-primary-400"),
           500: customColors("--c-primary-500"),
-          6000: customColors("--c-primary-600"),
+          600: customColors("--c-primary-600"),
           700: customColors("--c-primary-700"),
           800: customColors("--c-primary-800"),
           900: customColors("--c-primary-900"),
@@ -52,7 +47,7 @@ module.exports = {
           300: customColors("--c-secondary-300"),
           400: customColors("--c-secondary-400"),
           500: customColors("--c-secondary-500"),
-          6000: customColors("--c-secondary-600"),
+          600: customColors("--c-secondary-600"),
           700: customColors("--c-secondary-700"),
           800: customColors("--c-secondary-800"),
           900: customColors("--c-secondary-900"),
@@ -64,10 +59,22 @@ module.exports = {
           300: customColors("--c-neutral-300"),
           400: customColors("--c-neutral-400"),
           500: customColors("--c-neutral-500"),
-          6000: customColors("--c-neutral-600"),
+          600: customColors("--c-neutral-600"),
           700: customColors("--c-neutral-700"),
           800: customColors("--c-neutral-800"),
           900: customColors("--c-neutral-900"),
+        },
+        accent: {
+          50: customColors("--c-accent-50"),
+          100: customColors("--c-accent-100"),
+          200: customColors("--c-accent-200"),
+          300: customColors("--c-accent-300"),
+          400: customColors("--c-accent-400"),
+          500: customColors("--c-accent-500"),
+          600: customColors("--c-accent-600"),
+          700: customColors("--c-accent-700"),
+          800: customColors("--c-accent-800"),
+          900: customColors("--c-accent-900"),
         },
       },
     },

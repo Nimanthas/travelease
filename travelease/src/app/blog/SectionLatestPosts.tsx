@@ -7,7 +7,7 @@ import ButtonPrimary from "@/shared/ButtonPrimary";
 import WidgetTags from "./WidgetTags";
 import WidgetCategories from "./WidgetCategories";
 import WidgetPosts from "./WidgetPosts";
-import Card3 from "./Card3";
+import Card3 from "./CardBlogDefault";
 
 // THIS IS DEMO FOR MAIN DEMO
 // OTHER DEMO WILL PASS PROPS

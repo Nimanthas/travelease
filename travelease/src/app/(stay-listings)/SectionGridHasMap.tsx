@@ -8,8 +8,8 @@ import ButtonClose from "@/shared/ButtonClose";
 import Checkbox from "@/shared/Checkbox";
 import Pagination from "@/shared/Pagination";
 import TabFilters from "./TabFilters";
-import Heading2 from "@/shared/Heading2";
-import StayCard2 from "@/components/StayCard2";
+import Heading2 from "@/shared/HeadingAlternate";
+import StayCard2 from "@/components/StayCardAlternate";
 
 const DEMO_STAYS = DEMO_STAY_LISTINGS.filter((_, i) => i < 12);
 export interface SectionGridHasMapProps {}

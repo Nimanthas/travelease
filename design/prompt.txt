@@ -1,32 +1,37 @@
-I require a detailed design specification for a high-end travel website tailored for a Sri Lankan tour company, emphasizing a 'Moody Luxury Jungle' aesthetic based on the attached image and files. Please structure the specification with the following sections:
+I require a detailed alignment of the E:\Dev\travelease\travelease for a high-end travel website tailored for a Sri Lankan tour company, 
+emphasizing a 'Moody Luxury Jungle' aesthetic based on the E:\Dev\travelease\design files. The E:\Dev\travelease\design contains details design images and logo for the site.
+Please structure and develop the application with the following instructions and sections:
 
 1. **Visual Style:**
-   - Color Palette: Specify the primary background color, accent colors for CTA buttons, and any additional colors for depth.
-   - Imagery: Outline the types of imagery to be used, including specific locations in Sri Lanka and any design elements for overlays.
-   - Typography: Recommend specific font choices for headlines and body text, focusing on elegance and readability.
+   - Color Palette: The application should align with current theme and the primary background color, accent colors for CTA buttons, and any additional colors for depth. Also
+     MAkesure to align the colors based on E:\Dev\travelease\design logo colors.
+   - Imagery: The images should align including specific locations in Sri Lanka and any design elements for overlays. Also for Hero section backgrounf doe farme should use https://www.youtube.com/watch?v=tzeXMaXWsuc.
+   - Typography: Should align with current application context and logo.
 
 2. **Layout & Structure:**
-   - Hero Section: Describe the main visual component (e.g., video or image), overlay text, and any interactive elements.
-   - Journey Path: Explain the layout for guiding users through the site, including specific sections to highlight.
-   - Sections to Include: List main sections such as popular tours, video gallery, guides, and testimonials, with a brief description of each.
+   - Hero Section: Refer to E:\Dev\travelease\design\Hero Section.png where contains the Hero section design. Make sure is pxel perefctlu aligned.
+   - Journey Path: The layout for guiding users through the site, including specific sections to highlight. Use dashd throughout the website to as design.
+   - Sections to Include: Preserve the current sections while adjusting to sections modifications as per E:\Dev\travelease\design mentioned.
 
 3. **Interactions:**
-   - Parallax Scrolling: Detail how background elements will interact with foreground content during scrolling.
-   - Hover States: Specify the visual effect for buttons or interactive elements on hover.
-   - Transitions: Describe the animations or transitions that will occur as users interact with the site.
+   - Parallax Scrolling: Background elements will interact with foreground content during scrolling.
+   - Hover States: The visual effect for buttons or interactive elements on hover.
+   - Transitions: The animations or transitions that will occur as users interact with the site.
 
-Ensure the design conveys exclusivity, adventure, and a premium experience. The output should be presented in a clear and organized format, suitable for a design team to follow. Avoid vague suggestions and focus on specific, actionable details. The design should be pixel perfectly aligned with the design image given including animations. Also make sure design supports two main themes as light and dark with aligned to the given logo colors. It is must that you adhere to the logo colors strictly. 
+Ensure the design conveys exclusivity, adventure, and a premium experience. The output should be presented in a clear and organized format, suitable for a design team to follow. 
+Focus on specific, actionable details. The design should be pixel perfectly aligned with the design image given including animations. 
+Also make sure design supports two main themes as light and dark as same as now with aligned to the given logo colors. It is must that you adhere to the logo colors strictly. 
 
 Below is a explanation of design sections where you are advised to follow the flow aligned with attached file content as well:
 
 1. **Core Application**
-   - Core application should adopt from https://github.com/Nimanthas/travelease.git repository and it is MUST to reuse and adopt the application on top of this website.
-   - All the functionalities in https://github.com/Nimanthas/travelease.git should preserve without intact and only allowed to align the design perfectly with given instructions.
+   - Core application should adopt from E:\Dev	ravelease	ravelease repository and it is MUST to reuse and adopt the application on top of this website.
+   - All the functionalities in E:\Dev	ravelease	ravelease should preserve without intact and only allowed to align the design perfectly with given instructions.
    - Make sure when coding maintain the structure of the code aligned perfectly with current structure and you will place the files in appropriate places.
    - Application should support responsive.
 
 2. **Header Section**
-   - Header should align to the header in https://github.com/Nimanthas/travelease.git as same design, layout and components.
+   - Header should align to the header in E:\Dev	ravelease	ravelease as same design, layout and components.
 
 3. **Hero Section**
    - The design should follow the same exact design as per the design image given with having leaves and background video.
@@ -54,16 +59,28 @@ Below is a explanation of design sections where you are advised to follow the fl
 
 5. **Section 03 - Popular Tours**
    - This section user will able to see the popular and trending packages that is there in the website.
-   - each should align the to design of showing a popular or trending service based on https://github.com/Nimanthas/travelease.git and also reusing the same components. This is equal to 'Featured places to stay' section in https://github.com/Nimanthas/travelease.git.
+   - each should align the to design of showing a popular or trending service based on E:\Dev	ravelease	ravelease and also reusing the same components. This is equal to 'Featured places to stay' section in E:\Dev	ravelease	ravelease.
    - Popular tours will get sections based on the regions of Sri Lanka as South, Central, North, and West.
 
 6. **Section 04 - Services**
    - Here we will categorize our main services that provides.
    - It will be tile slider where users can slides through the services.
-   - This is equal to the component in 'Suggestions for discovery' layout in https://github.com/Nimanthas/travelease.git.
+   - This is equal to the component in 'Suggestions for discovery' layout in E:\Dev	ravelease	ravelease.
 
 4. **All other section**
-   - The remaining all the sections in https://github.com/Nimanthas/travelease.git will come into here.
+   - The remaining all the sections in E:\Dev	ravelease	ravelease will come into here.
 
 
 For context, I have experience in visual design but am not a web development expert. The specification should serve as a comprehensive guide for creating a visually stunning and user-friendly experience for high-end travelers.
+
+Application: E:\Dev\travelease\travelease
+Design: E:\Dev\travelease\design
+
+Also remember;
+
+Do not write code before stating assumptions. 
+Do not claim correctness you haven't verifed 
+Do not handle only the happy path. 
+Under what conditions does this work?
+
+Also make sure this is not a new fature. This a a revamp and adjusting the current template for our real requrment.
