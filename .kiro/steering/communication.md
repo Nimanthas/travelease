@@ -46,3 +46,6 @@ Assistant: [proceeds directly with the requested action]
 - Avoids artificial validation of non-factual statements
 - Focuses on understanding and execution rather than praise
 - Prevents misrepresenting user statements as claims that could be "right" or "wrong"
+
+## Documentaions
+- Do not create unnessary documentaions. Create documentaions only if its nessasry and needed.
