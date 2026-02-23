@@ -1,7 +1,9 @@
-import React from "react";
+"use client";
+
+import React, { ComponentType } from "react";
+import dynamic from "next/dynamic";
 import PageAddListing1 from "./PageAddListingStep1";
 import PageAddListing10 from "./PageAddListing10";
-import PageAddListing2 from "./PageAddListingStep2";
 import PageAddListing3 from "./PageAddListing3";
 import PageAddListing4 from "./PageAddListing4";
 import PageAddListing5 from "./PageAddListing5";
@@ -10,6 +12,10 @@ import PageAddListing7 from "./PageAddListing7";
 import PageAddListing8 from "./PageAddListing8";
 import PageAddListing9 from "./PageAddListing9";
 
+const PageAddListing2 = dynamic(() => import("./PageAddListingStep2"), {
+  ssr: false,
+});
+
 const Page = ({
   params,
   searchParams,
@@ -17,7 +23,7 @@ const Page = ({
   params: { stepIndex: string };
   searchParams?: { [key: string]: string | string[] | undefined };
 }) => {
-  let ContentComponent = PageAddListing1;
+  let ContentComponent: ComponentType<any> = PageAddListing1;
   switch (Number(params.stepIndex)) {
     case 1:
       ContentComponent = PageAddListing1;

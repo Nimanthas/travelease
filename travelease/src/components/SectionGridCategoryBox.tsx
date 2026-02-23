@@ -2,6 +2,8 @@ import CardCategoryBox1 from "@/components/CardCategoryBoxDefault";
 import Heading from "@/shared/Heading";
 import { TaxonomyType } from "@/data/types";
 import React from "react";
+import { motion } from "framer-motion";
+import { sectionEntrance, cardEntrance } from "@/utils/animationVariants";
 
 export interface SectionGridCategoryBoxProps {
   categories?: TaxonomyType[];
@@ -104,19 +106,36 @@ const SectionGridCategoryBox: React.FC<SectionGridCategoryBoxProps> = ({
   }
 
   return (
-    <div className={`nc-SectionGridCategoryBox relative ${className}`}>
+    <motion.div 
+      className={`nc-SectionGridCategoryBox relative ${className}`} 
+      data-nc-id="SectionGridCategoryBox" 
+      data-journey-path-waypoint="categories"
+      {...sectionEntrance}
+    >
       <Heading
         desc="Discover great places near where you live"
         isCenter={headingCenter}
       >
         Explore nearby
       </Heading>
-      <div className={`grid ${gridClassName} gap-5 sm:gap-6 md:gap-8`}>
+      <motion.div 
+        className={`grid ${gridClassName} gap-5 sm:gap-6 md:gap-8`}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ staggerChildren: 0.1, delayChildren: 0.2 }}
+        viewport={{ once: true, margin: '-100px' }}
+      >
         {categories.map((item, i) => (
-          <CardComponentName key={i} taxonomy={item} />
+          <motion.div
+            key={i}
+            {...cardEntrance}
+            transition={{ delay: i * 0.05 }}
+          >
+            <CardComponentName taxonomy={item} />
+          </motion.div>
         ))}
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 

@@ -7,7 +7,7 @@ import ButtonThird from "@/shared/ButtonThird";
 import ButtonClose from "@/shared/ButtonClose";
 import Checkbox from "@/shared/Checkbox";
 import convertNumbThousand from "@/utils/convertNumbThousand";
-import Slider from "rc-slider";
+import Slider from "@/components/RangeSlider";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 
 // DEMO DATA
@@ -124,7 +124,7 @@ const TabFilters = () => {
                     "bg-neutral-50 dark:bg-neutral-900 rounded-xl p-3 space-y-8 focus:outline-none focus:ring-2 ring-offset-2 ring-offset-blue-400 ring-white ring-opacity-60"
                   }
                 >
-                  <span className=" text-neutral-6000 dark:text-neutral-300 text-sm">
+                  <span className=" text-neutral-600 dark:text-neutral-300 text-sm">
                     {idx ? " Tokyo to Singapore" : " Singapore to Tokyo"}
                   </span>
                   <div></div>
@@ -142,7 +142,7 @@ const TabFilters = () => {
                       min={0}
                       max={24}
                       defaultValue={posts.Departure}
-                      onChange={(val) =>
+                      onChange={(val: any) =>
                         setCatTimes((catTimes) =>
                           !idx
                             ? {
@@ -177,7 +177,7 @@ const TabFilters = () => {
                       min={0}
                       max={24}
                       defaultValue={posts.Arrival}
-                      onChange={(val) =>
+                      onChange={(val: any) =>
                         setCatTimes((catTimes) =>
                           !idx
                             ? {
@@ -447,7 +447,7 @@ const TabFilters = () => {
                         min={1}
                         max={72}
                         defaultValue={tripTimes}
-                        onChange={(e) => setTripTimes(e as number)}
+                        onChange={(e: any) => setTripTimes(e as number)}
                       />
                     </div>
                   </div>
@@ -506,7 +506,7 @@ const TabFilters = () => {
                         max={5000}
                         defaultValue={[rangePrices[0], rangePrices[1]]}
                         allowCross={false}
-                        onChange={(e) => setRangePrices(e as number[])}
+                        onChange={(e: any) => setRangePrices(e as number[])}
                       />
                     </div>
 
@@ -655,14 +655,12 @@ const TabFilters = () => {
             <div className="min-h-screen text-center">
               <Transition.Child
                 as={Fragment}
-                enter="ease-out duration-300"
                 enterFrom="opacity-0"
                 enterTo="opacity-100"
-                leave="ease-in duration-200"
                 leaveFrom="opacity-100"
                 leaveTo="opacity-0"
               >
-                <Dialog.Overlay className="fixed inset-0 bg-black bg-opacity-40 dark:bg-opacity-60" />
+                <div className="fixed inset-0 bg-black bg-opacity-40 dark:bg-opacity-60" />
               </Transition.Child>
 
               {/* This element is to trick the browser into centering the modal contents. */}
@@ -673,11 +671,11 @@ const TabFilters = () => {
                 &#8203;
               </span>
               <Transition.Child
-                className="inline-block py-8 px-2 h-screen w-full max-w-4xl"
-                enter="ease-out duration-300"
+                as={Fragment}
+                enter="transition ease-out duration-300"
                 enterFrom="opacity-0 scale-95"
                 enterTo="opacity-100 scale-100"
-                leave="ease-in duration-200"
+                leave="transition ease-in duration-200"
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
@@ -727,7 +725,7 @@ const TabFilters = () => {
                                 max={2000}
                                 defaultValue={[0, 1000]}
                                 allowCross={false}
-                                onChange={(e) => setRangePrices(e as number[])}
+                                onChange={(e: any) => setRangePrices(e as number[])}
                               />
                             </div>
 
@@ -795,7 +793,7 @@ const TabFilters = () => {
                             min={1}
                             max={72}
                             defaultValue={tripTimes}
-                            onChange={(e) => setTripTimes(e as number)}
+                            onChange={(e: any) => setTripTimes(e as number)}
                           />
                         </div>
                       </div>

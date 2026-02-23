@@ -1,15 +1,15 @@
 "use client";
 
 import React, { FC, useState } from "react";
-import GoogleMapReact from "google-map-react";
 import { DEMO_CAR_LISTINGS } from "@/data/listings";
 import ButtonClose from "@/shared/ButtonClose";
 import Checkbox from "@/shared/Checkbox";
 import Pagination from "@/shared/Pagination";
-import TabFilters from "./TabFilters";
+import dynamic from "next/dynamic";
 import Heading2 from "@/shared/HeadingAlternate";
 import CarCardH from "@/components/CarCardH";
-import AnyReactComponent from "@/components/AnyReactComponent/AnyReactComponent";
+
+const TabFilters = dynamic(() => import("./TabFilters"));
 
 const DEMO_CARS = DEMO_CAR_LISTINGS.filter((_, i) => i < 12);
 
@@ -79,29 +79,12 @@ const SectionGridHasMap: FC<SectionGridHasMapProps> = () => {
               <Checkbox
                 className="text-xs xl:text-sm text-neutral-800"
                 name="xx"
-                label="Search ass I move the map"
+                label="Search as I move the map"
               />
             </div>
-            {/* BELLOW IS MY GOOGLE API KEY -- PLEASE DELETE AND TYPE YOUR API KEY */}
-
-            <GoogleMapReact
-              bootstrapURLKeys={{
-                key: "AIzaSyAGVJfZMAKYfZ71nzL_v5i3LjTTWnCYwTY",
-              }}
-              yesIWantToUseGoogleMapApiInternals
-              defaultZoom={12}
-              defaultCenter={DEMO_CARS[0].map}
-            >
-              {DEMO_CARS.map((item) => (
-                <AnyReactComponent
-                  isSelected={currentHoverID === item.id}
-                  key={item.id}
-                  lat={item.map.lat}
-                  lng={item.map.lng}
-                  car={item}
-                />
-              ))}
-            </GoogleMapReact>
+            <div className="w-full h-full flex items-center justify-center bg-neutral-100 dark:bg-neutral-800">
+              <p className="text-neutral-500 dark:text-neutral-400">Map view temporarily disabled</p>
+            </div>
           </div>
         </div>
       </div>

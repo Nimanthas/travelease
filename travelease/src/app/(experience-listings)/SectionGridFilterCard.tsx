@@ -1,10 +1,14 @@
-import React, { FC } from "react";
+"use client";
+
+import React, { FC, useState } from "react";
 import { DEMO_EXPERIENCES_LISTINGS } from "@/data/listings";
 import { ExperiencesDataType, StayDataType } from "@/data/types";
 import Pagination from "@/shared/Pagination";
-import TabFilters from "./TabFilters";
+import dynamic from "next/dynamic";
 import Heading2 from "@/shared/HeadingAlternate";
 import ExperiencesCard from "@/components/ExperiencesCard";
+
+const TabFilters = dynamic(() => import("./TabFilters"), { ssr: false });
 
 export interface SectionGridFilterCardProps {
   className?: string;

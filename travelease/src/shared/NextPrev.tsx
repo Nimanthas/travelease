@@ -32,22 +32,24 @@ const NextPrev: FC<NextPrevProps> = ({
         <button
           className={`${btnClassName} ${
             !onlyPrev ? "mr-[6px]" : ""
-          } bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-6000 dark:hover:border-neutral-500 rounded-full flex items-center justify-center hover:border-neutral-300 ${twFocusClass()}`}
+          } bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-600 dark:hover:border-neutral-500 rounded-full flex items-center justify-center hover:border-neutral-300 ${twFocusClass()}`}
           onClick={onClickPrev}
           title="Prev"
+          aria-label="Previous"
           data-glide-dir="<"
         >
-          <i className="las la-angle-left"></i>
+          <i className="las la-angle-left" aria-hidden="true"></i>
         </button>
       )}
       {!onlyPrev && (
         <button
-          className={`${btnClassName} bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-6000 dark:hover:border-neutral-500 rounded-full flex items-center justify-center hover:border-neutral-300 ${twFocusClass()}`}
+          className={`${btnClassName} bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-600 dark:hover:border-neutral-500 rounded-full flex items-center justify-center hover:border-neutral-300 ${twFocusClass()}`}
           onClick={onClickNext}
           title="Next"
+          aria-label="Next"
           data-glide-dir=">"
         >
-          <i className="las la-angle-right"></i>
+          <i className="las la-angle-right" aria-hidden="true"></i>
         </button>
       )}
     </div>

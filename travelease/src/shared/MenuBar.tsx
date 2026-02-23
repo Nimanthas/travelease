@@ -40,7 +40,7 @@ const MenuBar: React.FC<MenuBarProps> = ({
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <Dialog.Overlay className="fixed inset-0 bg-black/60 dark:bg-black/70" />
+            <div className="fixed inset-0 bg-black/60 dark:bg-black/70" />
           </Transition.Child>
           <div className="fixed inset-0">
             <div className="flex justify-end min-h-full ">
@@ -68,7 +68,9 @@ const MenuBar: React.FC<MenuBarProps> = ({
     <>
       <button
         onClick={handleOpenMenu}
-        className={`focus:outline-none flex items-center justify-center ${className}`}
+        className={`focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 dark:focus-visible:ring-primary-400 dark:focus-visible:ring-offset-neutral-900 flex items-center justify-center transition-all duration-200 ${className}`}
+        aria-label="Open navigation menu"
+        aria-expanded={isVisable}
       >
         <Bars3Icon className={iconClassName} />
       </button>

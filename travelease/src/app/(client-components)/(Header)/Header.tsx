@@ -91,7 +91,7 @@ const Header: FC<HeaderProps> = ({ className = "" }) => {
   const renderButtonOpenHeroSearch = () => {
     return (
       <div
-        className={`w-full relative flex items-center justify-between border border-neutral-200 dark:border-neutral-6000 rounded-full shadow hover:shadow-md transition-all ${showHeroSearch
+        className={`w-full relative flex items-center justify-between border border-neutral-200 dark:border-neutral-600 rounded-full shadow hover:shadow-md transition-all ${showHeroSearch
           ? "-translate-x-0 translate-y-20 scale-x-[2.55] scale-y-[1.8] opacity-0 pointer-events-none invisible"
           : "visible"
           }`}
@@ -125,7 +125,7 @@ const Header: FC<HeaderProps> = ({ className = "" }) => {
           className="flex-shrink-0 ml-auto pr-2 cursor-pointer"
           onClick={() => setShowHeroSearch("location")}
         >
-          <span className="w-8 h-8 flex items-center justify-center rounded-full bg-primary-6000  text-white">
+          <span className="w-8 h-8 flex items-center justify-center rounded-full bg-primary-600  text-white">
             <MagnifyingGlassIcon className="w-5 h-5" />
           </span>
         </div>
@@ -170,16 +170,16 @@ const Header: FC<HeaderProps> = ({ className = "" }) => {
             <div className="hidden md:flex relative z-10 flex-1 justify-end text-neutral-700 dark:text-neutral-100">
               <div className=" flex space-x-1">
                 <LangDropdown />
-                <Link
+                {/* <Link
                   href={"/add-listing/1"}
                   className="self-center hidden xl:inline-flex px-4 py-2 border border-neutral-300 hover:border-neutral-400 dark:border-neutral-700 rounded-full items-center text-sm text-gray-700 dark:text-neutral-300 font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
                 >
                   List your property
-                </Link>
+                </Link> */}
 
-                <NotifyDropdown />
+                {/* <NotifyDropdown /> */}
                 <AvatarDropdown />
-                <MenuBar />
+                {/* <MenuBar /> */}
               </div>
             </div>
           </div>

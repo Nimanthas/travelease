@@ -1,8 +1,12 @@
+"use client";
+
 import React, { FC } from "react";
-import TabFilters from "./TabFilters";
+import dynamic from "next/dynamic";
 import Heading2 from "@/shared/HeadingAlternate";
 import FlightCard, { FlightCardProps } from "@/components/FlightCard";
 import ButtonPrimary from "@/shared/ButtonPrimary";
+
+const TabFilters = dynamic(() => import("./TabFilters"), { ssr: false });
 
 export interface SectionGridFilterCardProps {
   className?: string;

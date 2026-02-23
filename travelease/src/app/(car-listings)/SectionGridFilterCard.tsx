@@ -1,10 +1,14 @@
+"use client";
+
 import React, { FC } from "react";
 import { DEMO_CAR_LISTINGS } from "@/data/listings";
 import { CarDataType } from "@/data/types";
 import Pagination from "@/shared/Pagination";
-import TabFilters from "./TabFilters";
+import dynamic from "next/dynamic";
 import Heading2 from "@/shared/HeadingAlternate";
 import CarCard from "@/components/CarCard";
+
+const TabFilters = dynamic(() => import("./TabFilters"), { ssr: false });
 
 export interface SectionGridFilterCardProps {
   className?: string;

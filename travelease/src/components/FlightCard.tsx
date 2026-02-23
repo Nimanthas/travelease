@@ -87,7 +87,7 @@ const FlightCard: FC<FlightCardProps> = ({ className = "", data }) => {
   return (
     <div
       className={`nc-FlightCardgroup p-4 sm:p-6 relative bg-white dark:bg-neutral-900 border border-neutral-100
-     dark:border-neutral-800 rounded-2xl overflow-hidden hover:shadow-lg transition-shadow space-y-6 ${className}`}
+     dark:border-neutral-800 rounded-2xl overflow-hidden space-y-6 ${className}`}
     >
       <div className={` sm:pr-20 relative  ${className}`}>
         {/*  eslint-disable-next-line jsx-a11y/anchor-has-content */}
@@ -171,7 +171,7 @@ const FlightCard: FC<FlightCardProps> = ({ className = "", data }) => {
           {/* PRICE */}
           <div className="flex-[4] whitespace-nowrap sm:text-right">
             <div>
-              <span className="text-xl font-semibold text-secondary-6000">
+              <span className="text-xl font-semibold text-secondary-600">
                 {data.price}
               </span>
             </div>

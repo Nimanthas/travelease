@@ -1,5 +1,9 @@
-import React, { FC } from "react";
-import SectionGridHasMap from "../SectionGridHasMap";
+"use client";
+
+import { FC } from "react";
+import dynamic from "next/dynamic";
+
+const SectionGridHasMap = dynamic(() => import("../SectionGridHasMap"), { ssr: false });
 
 export interface ListingCarMapPageProps {}
 

@@ -1,0 +1,160 @@
+/* Global Interactive Element Styling - Sri Lankan Luxury Jungle Theme */
+
+/* Skip to Content Link - Hidden until focused */
+.skip-to-content {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: rgb(var(--c-primary-600));
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 0 0 4px 0;
+  z-index: 100;
+  transition: top 200ms ease-in-out;
+}
+
+.skip-to-content:focus {
+  top: 0;
+}
+
+.dark .skip-to-content {
+  background: rgb(var(--c-primary-500));
+}
+
+/* Button Hover States - 200ms transition */
+button:not(:disabled):hover,
+a[role="button"]:hover {
+  transition: all 200ms ease-in-out;
+}
+
+/* Card Elevation on Hover */
+.nc-StayCard:hover,
+.nc-ExperiencesCard:hover,
+.nc-CarCard:hover,
+.nc-CardAuthorBox:hover,
+.nc-CardAuthorBox2:hover,
+.nc-CardCategoryBox1:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  transition: all 200ms ease-in-out;
+}
+
+/* Focus Rings for Keyboard Navigation - 2px outline */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[role="button"]:focus-visible,
+[tabindex]:not([tabindex="-1"]):focus-visible {
+  outline: 2px solid rgb(var(--c-primary-500));
+  outline-offset: 2px;
+  transition: outline 200ms ease-in-out;
+}
+
+.dark button:focus-visible,
+.dark a:focus-visible,
+.dark input:focus-visible,
+.dark textarea:focus-visible,
+.dark select:focus-visible,
+.dark [role="button"]:focus-visible,
+.dark [tabindex]:not([tabindex="-1"]):focus-visible {
+  outline-color: rgb(var(--c-primary-400));
+}
+
+/* Smooth Transitions for All Interactive Elements */
+button,
+a,
+input,
+textarea,
+select,
+[role="button"] {
+  transition: all 200ms ease-in-out;
+}
+
+/* Link Hover States */
+a:not(.no-hover):hover {
+  color: rgb(var(--c-primary-600));
+  transition: color 200ms ease-in-out;
+}
+
+.dark a:not(.no-hover):hover {
+  color: rgb(var(--c-primary-400));
+}
+
+/* Input Focus States */
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: rgb(var(--c-primary-500));
+  ring-color: rgb(var(--c-primary-500));
+  transition: all 200ms ease-in-out;
+}
+
+/* Badge Hover States */
+.nc-Badge:hover {
+  transform: scale(1.05);
+  transition: transform 200ms ease-in-out;
+}
+
+/* Icon Button Hover States */
+button[aria-label]:hover svg,
+a[aria-label]:hover svg {
+  transform: scale(1.1);
+  transition: transform 200ms ease-in-out;
+}
+
+/* Ensure WCAG AA Contrast - Primary Colors */
+.text-primary-600 {
+  color: rgb(var(--c-primary-600));
+}
+
+.dark .text-primary-400 {
+  color: rgb(var(--c-primary-400));
+}
+
+/* Ensure WCAG AA Contrast - Accent Colors */
+.text-accent-600 {
+  color: rgb(var(--c-accent-600));
+}
+
+.dark .text-accent-400 {
+  color: rgb(var(--c-accent-400));
+}
+
+/* Hover State Backgrounds */
+.hover\:bg-primary-50:hover {
+  background-color: rgb(var(--c-primary-50));
+}
+
+.dark .hover\:bg-primary-900:hover {
+  background-color: rgb(var(--c-primary-900));
+}
+
+/* Journey Path Connection Points */
+[data-journey-path-waypoint] {
+  position: relative;
+}
+
+[data-journey-path-waypoint]::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background-color: rgb(var(--c-primary-500));
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+}
+
+.dark [data-journey-path-waypoint]::before {
+  background-color: rgb(var(--c-primary-400));
+}
+
+[data-journey-path-waypoint]:hover::before {
+  opacity: 1;
+}

@@ -133,7 +133,7 @@ const StayCardH: FC<StayCardHProps> = ({
 
   return (
     <div
-      className={`nc-StayCardH group relative bg-white dark:bg-neutral-900 border border-neutral-100 dark:border-neutral-800 rounded-2xl overflow-hidden hover:shadow-xl transition-shadow ${className}`}
+      className={`nc-StayCardH group relative bg-white dark:bg-neutral-900 border border-neutral-100 dark:border-neutral-800 rounded-2xl overflow-hidden ${className}`}
     >
       <Link href={href} className="absolute inset-0"></Link>
       <div className="grid grid-cols-1 md:flex md:flex-row ">

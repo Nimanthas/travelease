@@ -1,10 +1,14 @@
+"use client";
+
 import React, { FC } from "react";
 import { DEMO_STAY_LISTINGS } from "@/data/listings";
 import { StayDataType } from "@/data/types";
 import Pagination from "@/shared/Pagination";
-import TabFilters from "./TabFilters";
+import dynamic from "next/dynamic";
 import Heading2 from "@/shared/HeadingAlternate";
 import StayCard2 from "@/components/StayCardAlternate";
+
+const TabFilters = dynamic(() => import("./TabFilters"), { ssr: false });
 
 export interface SectionGridFilterCardProps {
   className?: string;

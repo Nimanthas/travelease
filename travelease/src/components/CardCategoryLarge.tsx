@@ -25,21 +25,21 @@ const CardCategory4: FC<CardCategory4Props> = ({
       >
         <Image
           src={thumbnail || ""}
-          className="object-cover w-full h-full rounded-2xl"
+          className="object-cover w-full h-full rounded-2xl transition-transform duration-300 group-hover:scale-105"
           fill
           alt="archive"
           sizes="(max-width: 400px) 100vw, 400px"
         />
-        <span className="opacity-0 group-hover:opacity-100 absolute inset-0 bg-black bg-opacity-10 transition-opacity"></span>
+        <span className="opacity-0 group-hover:opacity-100 absolute inset-0 bg-gradient-to-t from-primary-900/30 to-transparent transition-opacity duration-300"></span>
       </div>
       <div className="mt-4 px-2 truncate text-center">
         <h2
-          className={`text-base sm:text-lg text-neutral-900 dark:text-neutral-100 font-medium truncate`}
+          className={`text-base sm:text-lg text-neutral-900 dark:text-neutral-100 font-medium truncate group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-200`}
         >
           {name}
         </h2>
         <span
-          className={`block mt-2 text-sm text-neutral-6000 dark:text-neutral-400`}
+          className={`block mt-2 text-sm text-neutral-600 dark:text-neutral-400`}
         >
           {convertNumbThousand(count || 0)}
           {` `}

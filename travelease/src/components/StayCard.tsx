@@ -120,7 +120,7 @@ const StayCard: FC<StayCardProps> = ({
         size === "default"
           ? "border border-neutral-100 dark:border-neutral-800 "
           : ""
-      } rounded-2xl overflow-hidden hover:shadow-xl transition-shadow ${className}`}
+      } rounded-2xl overflow-hidden ${className}`}
       data-nc-id="StayCard"
     >
       {renderSliderGallery()}

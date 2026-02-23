@@ -2,7 +2,7 @@
 
 import React, { Fragment, useState, FC } from "react";
 import { Popover, Transition } from "@headlessui/react";
-import Slider from "rc-slider";
+import Slider from "@/components/RangeSlider";
 import convertNumbThousand from "@/utils/convertNumbThousand";
 import ButtonSubmit from "../ButtonSubmit";
 import { CurrencyDollarIcon } from "@heroicons/react/24/outline";
@@ -77,7 +77,7 @@ const PriceRangeInput: FC<PriceRangeInputProps> = ({
                     defaultValue={[rangePrices[0], rangePrices[1]]}
                     allowCross={false}
                     step={1000}
-                    onChange={(e) => setRangePrices(e as number[])}
+                    onChange={(e: any) => setRangePrices(e as number[])}
                   />
                 </div>
 

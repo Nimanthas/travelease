@@ -1,9 +1,13 @@
+"use client";
+
 import SectionHeroArchivePage from "@/app/(server-components)/SectionHeroArchivePage";
 import BgGlassmorphism from "@/components/BgGlassmorphism";
 import SectionSliderNewCategories from "@/components/SectionSliderNewCategories";
 import SectionSubscribe2 from "@/components/SectionSubscribeNewsletter";
-import React, { FC } from "react";
-import SectionGridFilterCard from "../SectionGridFilterCard";
+import { FC } from "react";
+import dynamic from "next/dynamic";
+
+const SectionGridFilterCard = dynamic(() => import("../SectionGridFilterCard"), { ssr: false });
 
 export interface ListingFlightsPageProps {}
 

@@ -7,7 +7,7 @@ import ButtonThird from "@/shared/ButtonThird";
 import ButtonClose from "@/shared/ButtonClose";
 import Checkbox from "@/shared/Checkbox";
 import convertNumbThousand from "@/utils/convertNumbThousand";
-import Slider from "rc-slider";
+import Slider from "@/components/RangeSlider";
 import NcInputNumber from "@/components/NcInputNumber";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 
@@ -61,7 +61,7 @@ const TabFilters = () => {
         {({ open, close }) => (
           <>
             <Popover.Button
-              className={`flex items-center justify-center px-4 py-2 text-sm rounded-full border border-neutral-300 dark:border-neutral-700 hover:border-neutral-400 dark:hover:border-neutral-6000 focus:outline-none ${
+              className={`flex items-center justify-center px-4 py-2 text-sm rounded-full border border-neutral-300 dark:border-neutral-700 hover:border-neutral-400 dark:hover:border-neutral-600 focus:outline-none ${
                 open ? "!border-primary-500 " : ""
               }`}
             >
@@ -110,7 +110,7 @@ const TabFilters = () => {
         {({ open, close }) => (
           <>
             <Popover.Button
-              className={`flex items-center justify-center px-4 py-2 text-sm rounded-full border border-neutral-300 dark:border-neutral-700 hover:border-neutral-400 dark:hover:border-neutral-6000 focus:outline-none ${
+              className={`flex items-center justify-center px-4 py-2 text-sm rounded-full border border-neutral-300 dark:border-neutral-700 hover:border-neutral-400 dark:hover:border-neutral-600 focus:outline-none ${
                 open ? "!border-primary-500 " : ""
               }`}
             >
@@ -194,7 +194,7 @@ const TabFilters = () => {
                         max={2000}
                         defaultValue={[rangePrices[0], rangePrices[1]]}
                         allowCross={false}
-                        onChange={(e) => setRangePrices(e as number[])}
+                        onChange={(e: any) => setRangePrices(e as number[])}
                       />
                     </div>
 
@@ -342,14 +342,12 @@ const TabFilters = () => {
             <div className="min-h-screen text-center">
               <Transition.Child
                 as={Fragment}
-                enter="ease-out duration-300"
                 enterFrom="opacity-0"
                 enterTo="opacity-100"
-                leave="ease-in duration-200"
                 leaveFrom="opacity-100"
                 leaveTo="opacity-0"
               >
-                <Dialog.Overlay className="fixed inset-0 bg-black bg-opacity-40 dark:bg-opacity-60" />
+                <div className="fixed inset-0 bg-black bg-opacity-40 dark:bg-opacity-60" />
               </Transition.Child>
 
               {/* This element is to trick the browser into centering the modal contents. */}
@@ -360,11 +358,11 @@ const TabFilters = () => {
                 &#8203;
               </span>
               <Transition.Child
-                className="inline-block py-8 px-2 h-screen w-full max-w-4xl"
-                enter="ease-out duration-300"
+                as={Fragment}
+                enter="transition ease-out duration-300"
                 enterFrom="opacity-0 scale-95"
                 enterTo="opacity-100 scale-100"
-                leave="ease-in duration-200"
+                leave="transition ease-in duration-200"
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
@@ -416,7 +414,7 @@ const TabFilters = () => {
                                 max={2000}
                                 defaultValue={[0, 1000]}
                                 allowCross={false}
-                                onChange={(e) => setRangePrices(e as number[])}
+                                onChange={(e: any) => setRangePrices(e as number[])}
                               />
                             </div>
 

@@ -3,7 +3,6 @@
 import { MapPinIcon } from "@heroicons/react/24/solid";
 import LocationMarker from "@/components/AnyReactComponent/LocationMarker";
 import Label from "@/components/Label";
-import GoogleMapReact from "google-map-react";
 import React, { FC } from "react";
 import ButtonSecondary from "@/shared/ButtonSecondary";
 import Input from "@/shared/Input";
@@ -59,20 +58,8 @@ const PageAddListing2: FC<PageAddListing2Props> = () => {
           </span>
           <div className="mt-4">
             <div className="aspect-w-5 aspect-h-5 sm:aspect-h-3">
-              <div className="rounded-xl overflow-hidden">
-                <GoogleMapReact
-                  bootstrapURLKeys={{
-                    key: "AIzaSyAGVJfZMAKYfZ71nzL_v5i3LjTTWnCYwTY",
-                  }}
-                  yesIWantToUseGoogleMapApiInternals
-                  defaultZoom={15}
-                  defaultCenter={{
-                    lat: 55.9607277,
-                    lng: 36.2172614,
-                  }}
-                >
-                  <LocationMarker lat={55.9607277} lng={36.2172614} />
-                </GoogleMapReact>
+              <div className="rounded-xl overflow-hidden bg-neutral-100 dark:bg-neutral-800 flex items-center justify-center">
+                <p className="text-neutral-500 dark:text-neutral-400">Map view temporarily disabled</p>
               </div>
             </div>
           </div>

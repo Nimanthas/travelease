@@ -1,5 +1,9 @@
-import React, { FC } from "react";
-import SectionGridFilterCard from "../SectionGridFilterCard";
+"use client";
+
+import { FC } from "react";
+import dynamic from "next/dynamic";
+
+const SectionGridFilterCard = dynamic(() => import("../SectionGridFilterCard"), { ssr: false });
 
 export interface ListingCarPageProps {}
 

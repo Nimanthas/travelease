@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { FC } from "react";
-import Slider from "rc-slider";
+import Slider from "@/components/RangeSlider";
 import convertNumbThousand from "@/utils/convertNumbThousand";
 
 export interface PriceRangeInputProps {
@@ -37,7 +37,7 @@ const PriceRangeInput: FC<PriceRangeInputProps> = ({
           defaultValue={[rangePrices[0], rangePrices[1]]}
           allowCross={false}
           step={1000}
-          onChange={(e) => {
+          onChange={(e: any) => {
             setRangePrices(e as number[]);
             onChange && onChange(e as number[]);
           }}

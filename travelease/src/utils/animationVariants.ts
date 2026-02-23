@@ -190,6 +190,60 @@ export const sectionEntrance = {
   viewport: { once: true, margin: '-100px' },
 };
 
+// Section entrance with stagger for children
+export const sectionEntranceStagger = {
+  initial: { opacity: 0 },
+  whileInView: { 
+    opacity: 1,
+    transition: {
+      staggerChildren: staggerConfig.listItems,
+      delayChildren: 0.1,
+    },
+  },
+  viewport: { once: true, margin: '-100px' },
+};
+
+// Child element entrance (for use with sectionEntranceStagger)
+export const childEntrance = {
+  initial: { opacity: 0, y: 20 },
+  whileInView: { 
+    opacity: 1, 
+    y: 0,
+    transition: {
+      duration: durations.normal,
+      ease: easings.easeOut,
+    },
+  },
+};
+
+// Card entrance animation (for grids)
+export const cardEntrance = {
+  initial: { opacity: 0, scale: 0.95, y: 20 },
+  whileInView: { 
+    opacity: 1, 
+    scale: 1,
+    y: 0,
+    transition: {
+      duration: durations.normal,
+      ease: easings.easeOut,
+    },
+  },
+  viewport: { once: true, margin: '-50px' },
+};
+
+// Grid container with stagger
+export const gridEntranceStagger = {
+  initial: { opacity: 0 },
+  whileInView: { 
+    opacity: 1,
+    transition: {
+      staggerChildren: staggerConfig.cards,
+      delayChildren: 0.2,
+    },
+  },
+  viewport: { once: true, margin: '-100px' },
+};
+
 // Map pin marker animation
 export const mapPinVariants = {
   inactive: {
@@ -269,3 +323,72 @@ export function getAnimationDuration(duration: number): number {
 export function getAdjustedParallaxIntensity(intensity: number): number {
   return prefersReducedMotion() ? 1.0 : intensity;
 }
+
+/**
+ * Creates reduced-motion-aware animation variants
+ * Returns static variants when reduced motion is preferred
+ * 
+ * @param variants - Original animation variants
+ * @param shouldRespectReducedMotion - Whether to check reduced motion preference
+ * @returns Adjusted variants
+ */
+export function getAccessibleVariants<T extends Record<string, any>>(
+  variants: T,
+  shouldRespectReducedMotion: boolean = true
+): T {
+  if (!shouldRespectReducedMotion || !prefersReducedMotion()) {
+    return variants;
+  }
+
+  const staticVariants = {} as T;
+  
+  for (const key in variants) {
+    const variant = variants[key];
+    
+    if (typeof variant === 'object' && variant !== null) {
+      if ('transition' in variant) {
+        const { transition, ...rest } = variant;
+        staticVariants[key] = { ...rest, transition: { duration: 0 } } as any;
+      } else {
+        staticVariants[key] = variant;
+      }
+    } else {
+      staticVariants[key] = variant;
+    }
+  }
+  
+  return staticVariants;
+}
+
+/**
+ * Legacy variants function for backward compatibility
+ * Used by existing slider components
+ * 
+ * @param duration - Animation duration in milliseconds
+ * @param delay - Animation delay multiplier
+ * @returns Framer Motion variants object
+ */
+export const variants = (duration: number = 200, delay: number = 1) => ({
+  enter: (direction: number) => ({
+    x: direction > 0 ? 1000 : -1000,
+    opacity: 0,
+  }),
+  center: {
+    zIndex: 1,
+    x: 0,
+    opacity: 1,
+    transition: {
+      x: { type: 'spring', stiffness: 300, damping: 30 },
+      opacity: { duration: duration / 1000 },
+    },
+  },
+  exit: (direction: number) => ({
+    zIndex: 0,
+    x: direction < 0 ? 1000 : -1000,
+    opacity: 0,
+    transition: {
+      x: { type: 'spring', stiffness: 300, damping: 30 },
+      opacity: { duration: duration / 1000 },
+    },
+  }),
+});

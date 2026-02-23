@@ -13,9 +13,10 @@ const SwitchDarkMode: React.FC<SwitchDarkModeProps> = ({ className = "" }) => {
   return (
     <button
       onClick={_toogleDarkMode}
-      className={`self-center text-2xl md:text-3xl w-12 h-12 rounded-full text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 focus:outline-none flex items-center justify-center ${className}`}
+      className={`self-center text-2xl md:text-3xl w-12 h-12 rounded-full text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 dark:focus-visible:ring-primary-400 dark:focus-visible:ring-offset-neutral-900 flex items-center justify-center transition-all duration-200 ${className}`}
+      aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
+      aria-pressed={isDarkMode}
     >
-      <span className="sr-only">Enable dark mode</span>
       {isDarkMode ? (
         <MoonIcon className="w-7 h-7" aria-hidden="true" />
       ) : (
