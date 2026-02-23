@@ -11,7 +11,6 @@ import { MOOD_BOARD_IMAGES } from "@/data/mood-board-images";
 import { SectionWaypoint } from "@/components/JourneyPath";
 import { SRI_LANKAN_TOURS } from "@/data/sri-lankan-tours";
 
-// Dynamic imports for heavy components
 const JourneyPath = dynamic(() => import("@/components/JourneyPath"), {
   ssr: false,
 });
@@ -326,7 +325,7 @@ function PageHome() {
 
       {/* HERO SECTION - New redesigned hero with video */}
       <div ref={heroRef}>
-        <HeroSection />
+        {/* <HeroSection /> */}
       </div>
 
       {/* Spacer for fixed hero section */}
