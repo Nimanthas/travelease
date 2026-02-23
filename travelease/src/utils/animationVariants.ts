@@ -269,3 +269,38 @@ export function getAnimationDuration(duration: number): number {
 export function getAdjustedParallaxIntensity(intensity: number): number {
   return prefersReducedMotion() ? 1.0 : intensity;
 }
+
+/**
+ * Carousel/Slider animation variants generator
+ * Creates enter, center, and exit animations for carousel items
+ * 
+ * @param width - Width of the carousel item in pixels
+ * @param count - Number of items (used for stagger calculations)
+ * @returns Animation variants object with enter, center, exit states
+ */
+export function variants(width: number, count: number) {
+  return {
+    enter: (direction: number) => ({
+      x: direction > 0 ? width : -width,
+      opacity: 0,
+    }),
+    center: {
+      zIndex: 1,
+      x: 0,
+      opacity: 1,
+      transition: {
+        x: { type: 'spring', stiffness: 300, damping: 30 },
+        opacity: { duration: durations.fast },
+      },
+    },
+    exit: (direction: number) => ({
+      zIndex: 0,
+      x: direction < 0 ? width : -width,
+      opacity: 0,
+      transition: {
+        x: { type: 'spring', stiffness: 300, damping: 30 },
+        opacity: { duration: durations.fast },
+      },
+    }),
+  };
+}
